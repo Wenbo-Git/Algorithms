@@ -1,6 +1,5 @@
 /**
- * Initialize your data structure here.
- * @param {number} n
+https://leetcode.com/problems/design-tic-tac-toe
  */
 var TicTacToe = function(n) {
     this.grid = []
