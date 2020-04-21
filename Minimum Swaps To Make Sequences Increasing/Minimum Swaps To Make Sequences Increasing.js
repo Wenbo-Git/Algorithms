@@ -1,5 +1,8 @@
-/* A[i] A[i + 1]
+/* https://leetcode.com/problems/minimum-swaps-to-make-sequences-increasing
+
+   A[i] A[i + 1]
    B[i] B[i + 1]
+
    dp:  0    1   
       0 0    1
       1
@@ -8,8 +11,9 @@
       .
       .
      N - 1
-    dp[i][0]: min # of total swaps at index i if no swap at index i
-    dp[i][1]: min # of total swaps at index i if we swap ay index i
+   
+   dp[i][0]: min # of total swaps at index i if no swap at index i
+   dp[i][1]: min # of total swaps at index i if we swap ay index i
     
    Case 1: A[i] < A[i + 1] and B[i] < B[i + 1]
         dp[i + 1][0] = min(dp[i + 1][0], dp[i][0])
@@ -18,7 +22,7 @@
         dp[i + 1][0] = min(dp[i + 1][0], dp[i][1])
         dp[i + 1][1] = min(dp[i + 1][1], dp[i][0] + 1)
         
-    return min(dp[N - 1][0], dp[N - 1][1]) */
+   return min(dp[N - 1][0], dp[N - 1][1]) */
    
 var minSwap = function(A, B) {
     var N = A.length
